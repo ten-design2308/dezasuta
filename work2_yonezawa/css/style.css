@@ -83,11 +83,13 @@ img {
 .wrap-menu {
     display: flex;
     align-items: center;
+    max-width: 960px;
 }
 
 .wrap-menu ul {
     display: flex;
     justify-content: space-between;
+    max-width: 960px;
 }
 
 .wrap-menu li {
