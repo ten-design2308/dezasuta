@@ -50,7 +50,7 @@ img {
     text-align: center;
     line-height: 300px;
     color: white;
-
+    font-weight: bold;
 }
 
 
@@ -94,6 +94,7 @@ img {
 
 .wrap-menu li {
     padding: 5px 20px;
+    font-weight: lighter;
 }
 
 li+li {
@@ -106,6 +107,10 @@ li+li {
         margin: 20px 10px;
     }
 
+    .wrap-menu {
+        display: block;
+    }
+
     .wrap-menu ul {
         display: block;
         max-width: 767px;
@@ -113,9 +118,9 @@ li+li {
 
     .wrap-menu li {
         text-align: left;
-        /* 　メモ　padding: 15px 0; */
+        padding: 15px 0;
         width: 100%;
-        border-bottom: 2px solid #4c4c4c;
+        border-bottom: 1px solid #4c4c4c;
     }
 
     li+li {
