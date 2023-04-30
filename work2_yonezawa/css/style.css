@@ -1,28 +1,36 @@
 @charset "utf-8";
 
 /* cssリセット */
+
+html,
 body,
 h1,
 h2,
 h3,
+p,
+dl,
+dt,
+dd,
 ul,
-li,
-p {
-    margin: 0;
-    margin: 0;
+li {
     margin: 0;
     padding: 0;
     line-height: 1;
-    color: #4c4c4c;
-    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    /*デフォルトの文字色、font-familyを予め当てておく*/
+    color: #000;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
 }
 
 a {
+    /*下線を消す*/
     text-decoration: none;
+    /*色を消す*/
     color: inherit;
 }
 
 ul {
+    /*左の「・」を消す*/
     list-style: none;
 }
 
@@ -34,11 +42,10 @@ img {
 
 /* cssリセット ここまで */
 
-
 .wrap-blue {
     display: flex;
     justify-content: space-between;
-    width: 960px;
+    max-width: 960px;
     margin: 0 auto;
     padding-bottom: 40px;
 }
@@ -53,12 +60,11 @@ img {
     font-weight: bold;
 }
 
-
 .wrap-red {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 960px;
+    max-width: 960px;
     margin: 0 auto;
 }
 
@@ -72,32 +78,22 @@ img {
     margin-bottom: 20px;
 }
 
-
 .wrap-top {
     display: flex;
     justify-content: space-around;
-    max-width: 960px;
     margin: 20px auto;
 }
 
 .wrap-menu {
     display: flex;
     align-items: center;
-    max-width: 960px;
-}
-
-.wrap-menu ul {
-    display: flex;
-    justify-content: space-between;
-    max-width: 960px;
 }
 
 .wrap-menu li {
     padding: 5px 20px;
-    font-weight: lighter;
 }
 
-li+li {
+li + li {
     border-left: 1px solid #4c4c4c;
 }
 
@@ -117,13 +113,11 @@ li+li {
     }
 
     .wrap-menu li {
-        text-align: left;
         padding: 15px 0;
-        width: 100%;
         border-bottom: 1px solid #4c4c4c;
     }
 
-    li+li {
+    li + li {
         border-left: 0;
     }
 }
