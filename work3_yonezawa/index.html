@@ -15,9 +15,9 @@
     <script>
         let num = 1;
         for (let i = 0; i < 11; i++) {
-            num = num + 1;
+            num = num + num + 1;
         }
-        if (num <= 20) {
+        if (num >= 20) {
             console.log("20以上");
         } else {
             console.log("20未満");
