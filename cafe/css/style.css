@@ -1,0 +1,286 @@
+@charset "UTF-8";
+
+/* cssリセット */
+
+/*利用するタグによってこちらの内容は増やす*/
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    /*デフォルトの文字色、font-familyを予め当てておく*/
+    color: #4f260b;
+    font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+        "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+        "ＭＳ 明朝", serif;
+    /* background-color: #e8d9bf; */
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+
+body {
+    background-color: #e8d9bf;
+}
+
+body > header,
+footer {
+    background-color: #fff;
+}
+/* cssリセット ここまで*/
+
+/* ヘッダー */
+
+.header_wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 7% 0 3%;
+}
+
+.header_logo {
+    width: 226px;
+}
+
+.pc_nav ul {
+    display: flex;
+}
+
+.pc_nav ul li {
+    width: 105px;
+    margin-left: 55px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic",
+        "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    text-align: center;
+}
+
+.slogan_wrap {
+    text-align: center;
+    margin: 105px auto 100px;
+}
+
+.slogan_en {
+    font-size: 30px;
+    padding-bottom: 50px;
+}
+
+.slogan_ja {
+    font-size: 82px;
+    line-height: 1.17;
+    letter-spacing: 0.1em;
+    font-feature-settings: "palt";
+    padding-bottom: 48px;
+}
+
+.slogan_ja2 {
+    font-size: 23px;
+    line-height: 1.65;
+    letter-spacing: 0.1em;
+    font-feature-settings: "palt";
+}
+
+.about_wrap {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto 105px;
+}
+
+.about_wrap img {
+    max-width: 500px;
+}
+
+.contents_about {
+    margin-left: 8%;
+    /* align-items: center; */
+    /* width: 410px; */
+    /* justify-content: flex-end; */
+}
+
+.contents_about h2 {
+    padding: 60px 0 48px;
+}
+
+.lead_1 {
+    font-size: 44px;
+    line-height: 1.39;
+    font-feature-settings: "palt";
+    padding-bottom: 35px;
+}
+
+.about_text {
+    font-size: 16px;
+    line-height: 1.63;
+    font-feature-settings: "palt";
+}
+
+.menu_wrap,
+.event_wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contents {
+    display: flex;
+    /* margin: 0 5%; */
+    margin: 40px auto 87px;
+}
+
+.contents div {
+    justify-content: space-between;
+    width: 300px;
+}
+
+.center {
+    text-align: center;
+}
+
+h2 img {
+    height: 78px;
+    /* width: auto; */
+    /* width: fit-content; */
+}
+
+h3 {
+    font-size: 38px;
+    color: #d30202;
+    margin: -11px 0 19px 10px;
+}
+
+.menu_contents p {
+    font-size: 17px;
+    line-height: 1.47;
+    font-feature-settings: "palt";
+}
+
+.slider2 {
+    display: flex;
+    margin: 17px auto 60px;
+}
+
+.slider2 img {
+    width: 20%;
+}
+
+.event_wrap ul {
+    margin: 30px auto 68px;
+}
+
+.event_wrap a {
+    margin-left: 55px;
+}
+
+iframe {
+    width: 100%;
+    margin: 37px auto 0;
+}
+
+/* footer p {
+    text-align: center;
+} */
+
+footer {
+    padding: 75px 0 80px;
+}
+
+footer img {
+    height: 50px;
+}
+
+.footer_contents {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto 75px;
+}
+
+.footer_contents p {
+    font-size: 20px;
+    line-height: 1.95;
+    font-feature-settings: "palt";
+    margin-left: 65px;
+}
+
+.footer_center {
+    text-align: center;
+}
+
+.page_top {
+    width: 125px;
+    position: fixed;
+    right: 15%;
+    bottom: 4%;
+}
+
+@media screen and (max-width: 1140px) {
+    .pc_nav ul {
+        display: none;
+    }
+
+    .about_wrap {
+        display: block;
+    }
+
+    .about_text {
+        margin: 0 5%;
+    }
+
+    .menu_contents {
+        padding-bottom: 55px;
+    }
+
+    .contents {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .contents div {
+        /* width: 100px; */
+        margin: 0 auto;
+    }
+
+    .contents_about {
+        margin-left: 0;
+    }
+
+    .contents_about h2,
+    .contents_about p {
+        text-align: center;
+    }
+}
