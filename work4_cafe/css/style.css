@@ -106,7 +106,7 @@ footer {
     font-size: 82px;
     line-height: 1.17;
     letter-spacing: 0.1em;
-    font-feature-settings: "palt";
+    /* font-feature-settings: "palt"; */
     padding-bottom: 48px;
 }
 
@@ -149,6 +149,7 @@ footer {
     font-size: 16px;
     line-height: 1.63;
     font-feature-settings: "palt";
+    text-align: justify;
 }
 
 .menu_wrap,
@@ -188,6 +189,7 @@ h3 {
     font-size: 17px;
     line-height: 1.47;
     font-feature-settings: "palt";
+    text-align: justify;
 }
 
 .slider2 {
@@ -252,13 +254,32 @@ footer img {
     .pc_nav ul {
         display: none;
     }
+}
 
+@media screen and (max-width: 767px) {
     .about_wrap {
         display: block;
     }
 
     .about_text {
         margin: 0 5%;
+    }
+
+    .slogan_en {
+        font-size: 17px;
+        padding-bottom: 25px;
+    }
+
+    .slogan_ja {
+        font-size: 38px;
+        line-height: 1.16;
+        letter-spacing: 0.02em;
+        padding-bottom: 20px;
+    }
+
+    .slogan_ja2 {
+        font-size: 16px;
+        line-height: 1.88;
     }
 
     .menu_contents {
@@ -282,5 +303,8 @@ footer img {
     .contents_about h2,
     .contents_about p {
         text-align: center;
+    }
+    .footer_contents {
+        display: block;
     }
 }
