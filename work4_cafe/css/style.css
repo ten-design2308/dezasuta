@@ -115,7 +115,23 @@ h2 img {
         "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
     text-align: center;
 }
+@media screen and (max-width: 767px) {
+    .header_logo {
+        width: 187px;
+    }
+}
 
+/* スライダーの調整 */
+.slick-dots {
+    bottom: 20px;
+}
+.slick-dots li button:before,
+.slick-dots li.slick-active button:before {
+    color: #fff;
+}
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
 /* メニューの出しわけ */
 .sp_nav,
 .sp_btn {
@@ -399,8 +415,11 @@ h3 {
         margin: 0 auto;
     }
     .contents div {
-        width: 300px;
+        width: 100%;
         margin: 0 auto;
+        padding-left: 27px;
+        padding-right: 27px;
+        box-sizing: border-box;
     }
     .contents_about {
         margin-left: 0;
@@ -470,16 +489,22 @@ h3 {
     .event_block {
         padding: 20px 24px;
         margin: 20px 0 30px;
+        display: block;
     }
     .event_block li {
         display: block;
         align-items: center;
         font-size: 16px;
     }
+    .event_block time {
+        display: block;
+    }
     .event_block a {
+        display: block;
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
+        margin-left: 0;
     }
 }
 
