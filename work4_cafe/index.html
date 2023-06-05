@@ -7,13 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>デザインカフェ</title>
     <meta name="description" content="デザインカフェのサイトです。">
+    <!-- slikのcss -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
-    <link href="css/jquery.lightbox-0.5.css" type="text/css" rel="stylesheet" media="screen" />
+    <!-- lightboxのcss -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.css">
+    <!-- 上書きcss -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <!-- slick -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- lightbox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 </head>
 
 <body>
@@ -119,12 +127,18 @@
         <h2 class="center"><img src="images/gallery@2x.png" alt="gallery"></h2>
 
         <div class="slider2">
-            <div><img src="images/pc_gallary_05-100.jpg" alt="店内の人の様子"></div>
-            <div><img src="images/pc_gallary_04-100.jpg" alt="コーヒー豆"></div>
-            <div><img src="images/pc_gallary_03-100.jpg" alt="カウンターの様子"></div>
-            <div><img src="images/pc_gallary_02-100.jpg" alt="おしゃれな照明"></div>
-            <div><img src="images/pc_gallary_01-100.jpg" alt="ラテアート"></div>
-            <div><img src="images/pc_gallary_03-100.jpg" alt="カウンターの様子"></div>
+            <div><a href="images/pc_gallary_05-100.jpg" data-lightbox="image-1" data-title="店内の人の様子"><img
+                        src="images/pc_gallary_05-100.jpg" alt="店内の人の様子"></a></div>
+            <div><a href="images/pc_gallary_04-100.jpg" data-lightbox="image-1" data-title="コーヒー豆"><img
+                        src="images/pc_gallary_04-100.jpg" alt="コーヒー豆"></a></div>
+            <div><a href="images/pc_gallary_03-100.jpg" data-lightbox="image-1" data-title="カウンターの様子"><img
+                        src="images/pc_gallary_03-100.jpg" alt="カウンターの様子"></a></div>
+            <div><a href="images/pc_gallary_02-100.jpg" data-lightbox="image-1" data-title="おしゃれな照明"><img
+                        src="images/pc_gallary_02-100.jpg" alt="おしゃれな照明"></a></div>
+            <div><a href="images/pc_gallary_01-100.jpg" data-lightbox="image-1" data-title="ラテアート"><img
+                        src="images/pc_gallary_01-100.jpg" alt="ラテアート"></a></div>
+            <div><a href="images/pc_gallary_03-100.jpg" data-lightbox="image-1" data-title="カウンターの様子"><img
+                        src="images/pc_gallary_03-100.jpg" alt="カウンターの様子"></a></div>
         </div>
     </section>
 
@@ -184,7 +198,7 @@
                 autoplaySpeed: 2000,
                 responsive: [
                     {
-                        breakpoint: 767,
+                        breakpoint: 768,
                         settings: {
                             slidesToShow: 1,
                             slidesToScroll: 1,
@@ -193,6 +207,11 @@
                     }
                 ]
             });
+
+            $('.slider2').lightBox({
+            }
+
+            );
 
         });
     </script>

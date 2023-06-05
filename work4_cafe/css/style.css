@@ -461,6 +461,9 @@ h3 {
     border-right: 5px solid #fff;
     transform: rotate(45deg);
 }
+.lb-data .lb-number {
+    display: none !important;
+}
 @media screen and (max-width: 767px) {
     .gallery h2 {
         padding-top: 33px;
