@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+/* cssリセット */
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dt,
+dd,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    /*デフォルトの文字色、font-familyを予め当てておく*/
+    color: #3c3c3c;
+    font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic",
+        "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    font-weight: normal;
+    font-feature-settings: "palt";
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+    transition: 0.3s;
+}
+
+/* いらないかもしれませんがメモです */
+/* a:hover {
+    opacity: 0.5;
+} */
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+
+/* 基本の背景色 */
+body {
+    background-color: #fffff0;
+}
+
+footer {
+    background-color: #a2d7dd;
+}
+/* cssリセット ここまで*/
