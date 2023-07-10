@@ -9,6 +9,8 @@
     <meta name="description" content="ten.のポートフォリオサイト｜トップページです。">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -18,82 +20,119 @@
             <img src="images/ten_logo_black@2x.png" alt="ten.">
         </h1>
         <!-- ハンバーガー -->
-        <div class="nav_btn"><span></span></div>
-        <nav class="nav_list">
-            <ul>
-                <li><a href="./thought">想い</a></li>
-                <li><a href="./works">制作と活動</a></li>
-                <li><a href="./about">私について</a></li>
-                <li><a href="./contact">お問い合わせ</a></li>
-            </ul>
-        </nav>
+        <div class="nav_btn">
+            <div class="nav_btn_line"><span></span></div>
+        </div>
+        <div class="nav_wrap">
+            <div class="nav_wrap_center">
+                <nav class="nav_wrap_list">
+                    <ul>
+                        <li><a href="./thought/index.html">想い</a></li>
+                        <li><a href="./works/index.html">制作と活動</a></li>
+                        <li><a href="./about/index.html">私について</a></li>
+                        <li><a href="./contact/index.html">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+                <div class="nav_wrap_sns">
+                    <img src="images/instagarm_logo@2x.png" alt="インスタグラムアカウント">
+                </div>
+            </div>
+        </div>
     </header>
 
     <!-- 想いの書き出し -->
-    <p class="vertical">小さな「点」が増え、繋がっていく</p>
+    <p class="vertical top">小さな「点」が増え、繋がっていく</p>
 
-    <p>関わってくれた全てのあなたに心はずむ瞬間が増えますように</p>
+    <p class="intro">関わってくれた全てのあなたに<br>心はずむ瞬間が増えますように</p>
 
-    <p>何かを見て美しいしいと感じたり、<br>自分のやりたかったことがカタチになったり、<br>新しく興味のあるものが増えたり、<br>その先にある未知のものにワクワクしたり、<br>そんな、心がふっと動き出すような<br>心がはずむきっかけの「点」をつくれますように。
-    </p>
+    <a href="./thought/index.html">
+        <p class="intro_sub">
+            何かを見て美しいしいと感じたり、<br>自分のやりたかったことがカタチになったり、<br>新しく興味のあるものが増えたり、<br>その先にある未知のものにワクワクしたり、<br>そんな、心がふっと動き出すような<br>心がはずむきっかけの「点」をつくれますように。
+        </p>
+    </a>
 
-    <p>想いをみる</p>
+    <p class="next">想いをみる</p>
 
     <!-- 制作と活動 -->
     <h2 class="vertical">製作と活動</h2>
 
-    <h3>デザインとコーディング</h3>
-    <p>主な使用ツール</p>
-    <p>Illusurator・Photoshop・InDesign<br>HTML・CSS・Java Script・JQuery</p>
+    <div class="works_wrap_01">
+        <div class="works_wrap_02">
+            <h3>デザインとコーディング</h3>
+            <p class="works_feature_01">主な使用ツール</p>
+            <p class="works_feature_02">Illusurator・Photoshop・InDesign<br>HTML・CSS・Java Script・JQuery</p>
 
-    <p>グラフィック</p>
+            <!-- <p>グラフィック</p>
     <p>名刺・チラシ<br>ポスター・ロゴ・冊子</p>
 
     <p>web</p>
-    <p>バナー・デザイン<br>コーディング</p>
+    <p>バナー・デザイン<br>コーディング</p> -->
+        </div>
 
+        <div class="works_wrap_02">
+            <h3>書道とアート</h3>
+            <p class="works_feature_01">主な制作</p>
+            <p class="works_feature_02">書道・銅版画・金工・油絵など</p>
+        </div>
 
-    <h3>書道とアート</h3>
-    <p>主な制作</p>
-    <p>書道・銅版画・金工・油絵など</p>
-
-
-    <h3>ワークショップ</h3>
-    <p>資格</p>
-    <p>美術科教員免許・学芸員</p>
-
+        <div class="works_wrap_02">
+            <h3>ワークショップ</h3>
+            <p class="works_feature_01">資格</p>
+            <p class="works_feature_02">美術科教員免許・学芸員</p>
+        </div>
+    </div>
     <!-- スライダー -->
-
-    <p>一覧でみる</p>
+    <a href="./works/index.html">
+        <p class="next">一覧でみる</p>
+    </a>
 
 
     <!-- ロゴについて -->
     <h2 class="vertical">ロゴマーク</h2>
-    <img src="images/ten_logo_black@2x.png" alt="ten.">
+    <div class="logo_img">
+        <img src="images/ten_logo_black@2x.png" alt="ten.">
+    </div>
 
-    <p>サイトの名前の「ten(てん)」は、「点」を意味します。<br>「点」1つであってもこだわり、意識をしてその意味を考えていく。<br>そんな想いを込めて名付けました。<br>シンボルマークを回転させるとひらがなの「て」と「ん」がモチーフになっています。
+    <p class="logo_sub">
+        サイトの名前の「ten(てん)」は、「点」を意味します。<br>「点」1つであってもこだわり、意識をしてその意味を考えていく。<br>そんな想いを込めて名付けました。<br>シンボルマークを回転させるとひらがなの「て」と「ん」がモチーフになっています。
     </p>
 
-    <p>詳しくみる</p>
+    <p class="next">詳しくみる</p>
 
 
     <!-- お問い合わせ -->
     <h2 class="vertical">お問い合わせ</h2>
 
-    <p>私に興味を持ってくださった方、お気軽にご連絡ください。</p>
+    <p class="contact_sub">私に興味を持ってくださった方、お気軽にご連絡ください。</p>
+
+    <a href="./contact/index.html">
+        <p class="next">話を聞いてみる</p>
+    </a>
 
     <!-- フッター -->
-    <img src="images/footer_pc@2x.png" alt="波">
+    <div class="footer_img">
+        <img src="images/footer_pc@2x.png" alt="波">
+    </div>
     <footer>
         <img src="images/ten_logo_white@2x.png" alt="ten.">
         <ul>
             <li><a href="./thought/index.html">想い</a></li>
-            <li><a href="./works">制作と活動</a></li>
-            <li><a href="./about">私について</a></li>
-            <li><a href="./contact">お問い合わせ</a></li>
+            <li><a href="./works/index.html">制作と活動</a></li>
+            <li><a href="./about/index.html">私について</a></li>
+            <li><a href="./contact/index.html">お問い合わせ</a></li>
         </ul>
 
     </footer>
+
+    <script>
+        $(function () {
+            $('.nav_btn, .nav_wrap_list li').on('click', function () {
+                $('.nav_wrap').fadeToggle();
+                $('.nav_btn_line, .nav_btn').toggleClass('open');
+
+            });
+        });
+    </script>
 
 </body>
 
