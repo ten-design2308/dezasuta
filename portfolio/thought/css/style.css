@@ -1,6 +1,80 @@
 @charset "UTF-8";
 
-.vertical {
-    -ms-writing-mode: tb-rl;
-    writing-mode: vertical-rl;
+h2 {
+    font-size: 30px;
+    letter-spacing: 0.1em;
+    z-index: -1;
+}
+.heading_01 {
+    position: fixed;
+    top: 180px;
+    left: 6%;
+    z-index: -1;
+}
+.top {
+    height: 450px;
+    margin: 250px auto 0;
+    font-size: 24px;
+    line-height: 2;
+    letter-spacing: 0.1em;
+}
+
+.thought_wrap {
+    text-align: justify;
+    width: 60%;
+    margin: 200px auto 160px;
+}
+.thought_right {
+    text-align: justify;
+    width: 60%;
+    margin-left: 40%;
+}
+.thought_left {
+    width: 60%;
+}
+.thought_right + .thought_left,
+.thought_left + .thought_right {
+    margin-top: 150px;
+}
+
+.heading_02 {
+    position: absolute;
+    /* width: 120px; */
+    height: 170px;
+    left: 6%;
+    z-index: -1;
+}
+.logo_wrap {
+    width: 60%;
+    margin: 160px auto 160px;
+}
+.logo_img {
+    width: 35%;
+    margin: 300px auto 160px;
+}
+.logo_desc + .logo_desc {
+    margin-top: 160px;
+}
+
+h3 {
+    font-size: 24px;
+    font-feature-settings: "palt";
+    letter-spacing: 0.05em;
+    padding-bottom: 17px;
+    border-bottom: 2px dotted #a2d7dd;
+    margin-bottom: 17px;
+}
+.thought_work {
+    font-size: 16px;
+    font-feature-settings: "palt";
+    letter-spacing: 0.05em;
+    line-height: 2;
+    margin-bottom: 40px;
+}
+.thought_logo {
+    font-size: 16px;
+    font-feature-settings: "palt";
+    letter-spacing: 0.05em;
+    line-height: 2;
+    margin-bottom: 40px;
 }

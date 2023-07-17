@@ -25,7 +25,6 @@ li {
     font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic",
         "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
     font-weight: normal;
-    font-feature-settings: "palt";
 }
 
 a {
@@ -37,9 +36,9 @@ a {
 }
 
 /* ホバー */
-a:hover {
+/* a:hover {
     opacity: 0.5;
-}
+} */
 
 ul {
     /*左の「・」を消す*/
@@ -58,7 +57,7 @@ body {
 }
 
 footer {
-    background-color: #165e83;
+    background: linear-gradient(#a2d7dd, #165e83);
 }
 /* 基本の縦書き */
 .vertical {
@@ -75,7 +74,6 @@ header {
     display: flex;
     width: 100%;
 }
-
 .header_logo {
     width: 100px;
     margin-top: 45px;
@@ -175,9 +173,13 @@ header {
 .nav_wrap_list ul li {
     color: #fff;
     font-size: 23px;
+    font-feature-settings: "palt";
 }
 .nav_wrap_list ul li + li {
     margin-top: 45px;
+}
+.nav_wrap_list ul li a:hover {
+    opacity: 0.7;
 }
 .nav_wrap_sns {
     text-align: center;
@@ -188,9 +190,23 @@ header {
 }
 
 /* フッター */
-.footer_img {
-    margin-top: 180px;
+.footer_wrap {
+    padding: 60px;
 }
-footer ul li {
+.footer_logo img {
+    display: block;
+    margin: 80px auto 0;
+    width: 140px;
+}
+.footer_list {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    margin: 40px auto;
+}
+.footer_nav ul li {
     color: #fff;
+}
+.footer_nav ul li a:hover {
+    opacity: 0.5;
 }

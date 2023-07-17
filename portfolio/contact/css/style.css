@@ -6,15 +6,17 @@ h2 {
     z-index: -1;
 }
 .heading {
-    position: absolute;
+    position: fixed;
     top: 180px;
-    left: 75px;
+    left: 6%;
+    z-index: -1;
 }
 p {
     text-align: center;
     font-size: 16px;
+    font-feature-settings: "palt";
     letter-spacing: 0.05em;
-    margin-top: 350px;
+    margin-top: 300px;
     margin-bottom: 90px;
 }
 
@@ -26,13 +28,33 @@ p {
 ::placeholder {
     color: #c7e7eb;
     font-size: 14px;
-    padding-top: 15px;
-    padding-left: 15px;
 }
+input:focus {
+    outline: none;
+    border: 1px solid #c7e7eb;
+}
+/* input[type="text"] {
+    color: red;
+} */
+input {
+    width: 100%;
+    margin: 0;
+    height: 2rem;
+    box-sizing: border-box;
+}
+textarea:focus {
+    outline: none;
+    border: 1px solid #c7e7eb;
+}
+/* input[type="msg"] {
+    color: red;
+} */
+/* （textarea自体のは文字色は変えられないと調べたので今回は後回しにします） */
 
 .contact_item {
     display: block;
     font-size: 15px;
+    font-feature-settings: "palt";
     margin-left: 15px;
     margin-bottom: 5px;
 }
@@ -42,6 +64,7 @@ p {
     border-radius: 16px;
     background: #fff;
     border: solid 1px #fff;
+    padding-left: 15px;
 }
 .contact_box_l {
     width: 100%;
@@ -50,11 +73,12 @@ p {
     background: #fff;
     border: solid 1px #fff;
     margin-bottom: 50px;
+    padding-left: 15px;
+    padding-top: 15px;
 }
 .contact_box_s + .contact_item {
     margin-top: 50px;
 }
-
 .btn_next {
     display: block;
     font-size: 15px;

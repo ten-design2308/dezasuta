@@ -17,7 +17,9 @@
     <!-- ヘッダー -->
     <header>
         <h1 class="header_logo">
-            <img src="images/ten_logo_black@2x.png" alt="ten.">
+            <a href="../index.html">
+                <img src="images/ten_logo_black@2x.png" alt="ten.">
+            </a>
         </h1>
         <!-- ハンバーガー -->
         <div class="nav_btn">
@@ -46,8 +48,9 @@
 
 
     <!-- フォーム -->
-    <form onsubmit="return false;"
-        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc1GYPvpZNJT7h7OVgWDoY82uv7OdNBUzcpmCGkV8Gj81a_2Q/formResponse">
+    <form onsubmit="submitted=true;"
+        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc1GYPvpZNJT7h7OVgWDoY82uv7OdNBUzcpmCGkV8Gj81a_2Q/formResponse"
+        method="post" target="hidden_iframe">
 
         <div class="contact_wrap">
             <label for="name_01" class="contact_item">お名前</label>
@@ -70,6 +73,12 @@
                 class="contact_item btn_next">送信する</button>
         </div>
     </form>
+    <script type="text/javascript">
+        var submitted = false;
+    </script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
+        onload="if(submitted)  {window.location='/Users/shiori/Desktop/dezasuta/portfolio/thanks.html';}"></iframe>
+
 
     <!-- <div class="contact_wrap">
         <span class="contact_item">お名前</span>
@@ -94,8 +103,25 @@
 
 
     <!-- フッターhomeから移植 -->
-    <img src="images/footer_pc@2x.png" alt="波">
-    <footer></footer>
+    <!-- フッター -->
+    <div class="footer_img">
+        <img src="images/footer_pc@2x.png" alt="波">
+    </div>
+    <footer>
+        <div class="footer_wrap">
+            <nav class="footer_nav">
+                <ul class="footer_list">
+                    <li><a href="./thought/index.html">想い</a></li>
+                    <li><a href="./works/index.html">制作と活動</a></li>
+                    <li><a href="./about/index.html">私について</a></li>
+                    <li><a href="./contact/index.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <a href="./index.html" class="footer_logo">
+                <img src="images/ten_logo_white@2x.png" alt="ten.">
+            </a>
+        </div>
+    </footer>
 
     <script>
         $(function () {

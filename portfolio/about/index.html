@@ -12,7 +12,43 @@
 </head>
 
 <body>
+    <!-- ヘッダー -->
+    <header>
+        <h1 class="header_logo">
+            <a href="./index.html">
+                <img src="images/ten_logo_black@2x.png" alt="ten.">
+            </a>
+        </h1>
+        <!-- ハンバーガー -->
+        <div class="nav_btn">
+            <div class="nav_btn_line"><span></span></div>
+        </div>
+        <div class="nav_wrap">
+            <div class="nav_wrap_center">
+                <nav class="nav_wrap_list">
+                    <ul>
+                        <li><a href="./thought/index.html">想い</a></li>
+                        <li><a href="./works/index.html">制作と活動</a></li>
+                        <li><a href="./about/index.html">私について</a></li>
+                        <li><a href="./contact/index.html">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+                <div class="nav_wrap_sns">
+                    <img src="images/instagarm_logo@2x.png" alt="インスタグラムアカウント">
+                </div>
+            </div>
+        </div>
+    </header>
 
+    <script>
+        $(function () {
+            $('.nav_btn, .nav_wrap_list li').on('click', function () {
+                $('.nav_wrap').fadeToggle();
+                $('.nav_btn_line, .nav_btn').toggleClass('open');
+
+            });
+        });
+    </script>
 </body>
 
 </html>
