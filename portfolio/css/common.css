@@ -73,6 +73,7 @@ header {
     top: 0;
     display: flex;
     width: 100%;
+    z-index: 99;
 }
 .header_logo {
     width: 100px;

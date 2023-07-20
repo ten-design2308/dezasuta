@@ -1,41 +1,34 @@
 @charset "UTF-8";
 
 /* 一覧ページ */
-h2 {
+#top {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.heading_list {
+    position: absolute;
+    top: 180px;
+    left: 6%;
     font-size: 30px;
     letter-spacing: 0.1em;
     z-index: -1;
 }
-.heading {
+.head_sticky {
     position: absolute;
-    top: 180px;
+    top: 0;
     left: 6%;
+    height: 100%;
     z-index: -1;
 }
-.head_design {
-    position: absolute;
-    top: 700px;
-    left: 6%;
-    z-index: -1;
+.sticky {
+    position: sticky;
+    top: 140px;
     font-size: 25px;
-    height: 300px;
-}
-.head_art {
-    position: absolute;
-    top: 1350px;
-    left: 6%;
+    /* height: 200px; */
     z-index: -1;
-    font-size: 25px;
-    height: 200px;
 }
-.head_workshop {
-    position: absolute;
-    top: 2000px;
-    left: 6%;
-    z-index: -1;
-    font-size: 25px;
-    height: 250px;
-}
+
 .works_list_top {
     margin-top: 300px;
     margin-left: 20%;
@@ -44,16 +37,20 @@ h2 {
     font-size: 20px;
     font-feature-settings: "palt";
     letter-spacing: 0.1em;
+    margin-top: 40px;
 }
-.works_list_top a li {
+/* .works_list_top li a {
     font-size: 20px;
     font-feature-settings: "palt";
     letter-spacing: 0.1em;
-    margin-top: 40px;
-}
+} */
 
 .works_list {
     width: 100%;
+}
+.section {
+    position: relative;
+    /* padding-top: 50px; */
 }
 .works_design_wrap,
 .works_art_wrap,
@@ -67,7 +64,7 @@ h2 {
     margin: 200px auto 0;
 }
 .works_art_wrap {
-    margin: 100px auto 0;
+    margin: 200px auto 0;
 }
 .works_workshop_wrap {
     margin: 100px auto 200px;
@@ -75,11 +72,92 @@ h2 {
 .works_list_img {
     max-width: 1200px;
     width: 47%;
-    margin-bottom: 50px;
+    margin-top: 50px;
+    /* ホバー用 */
+    position: relative;
+}
+/* workのホバー */
+.works_list_img span.works_img_hover {
+    position: relative; /*背景色の基点となる位置を定義*/
+    display: block;
+    line-height: 0; /*行の高さを0にする*/
+    overflow: hidden; /*拡大してはみ出る要素を隠す*/
+}
+.works_list_img span.works_img_hover::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    opacity: 0; /*透過0*/
+    transition: 0.3s ease-in-out; /*移り変わる速さを変更したい場合はこの数値を変更*/
+    transform: translateY(100%);
+    background: #fff; /*背景色*/
+    width: 100%;
+    height: 100%;
+}
+.works_list_img:hover span.works_img_hover::before {
+    /*hoverした時の変化*/
+    opacity: 0.9; /*透過なしに変化*/
+    transform: translateY(0);
+}
+.works_list_img span.works_hover_cap {
+    position: absolute;
+    opacity: 0; /*透過0*/
+    transition: 0.5s ease-in-out; /*移り変わる速さを変更したい場合はこの数値を変更*/
+    z-index: 3; /*テキストを前面に出す*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*テキストの位置中央指定*/
+    font-size: 14px;
+    text-align: center;
+    color: #165e83; /*テキストの色を変えたい場合はここを修正*/
+    line-height: 1.5; /*行の高さを1.5にする*/
+}
+.works_list_img:hover span.works_hover_cap {
+    opacity: 1; /*透過なしに変化*/
+}
+
+/* トップへ戻る */
+.page_top {
+    font-size: 14px;
+    font-feature-settings: "palt";
+    letter-spacing: 0.05em;
+    position: fixed;
+    right: 5%;
+    bottom: 10%;
+}
+.page_top::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -66px;
+    left: 5px;
+    width: 10px;
+    height: 45px;
+    border-top: solid 1px;
+    transform: rotate(35deg);
+}
+.page_top::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -65px;
+    left: 8px;
+    width: 10px;
+    height: 45px;
+    border-right: solid 1px;
 }
 
 /* それぞれのページ */
-
+.heading_each {
+    position: absolute;
+    top: 180px;
+    left: 6%;
+    font-size: 25px;
+    letter-spacing: 0.05em;
+    z-index: -1;
+}
 .next {
     text-align: center;
     display: block;
@@ -143,7 +221,7 @@ h2 {
 }
 
 .work_top_img {
-    width: 70%;
+    max-width: 70%;
     margin: 150px auto 72px;
 }
 h3 {
@@ -156,7 +234,9 @@ h3 {
 .work_desc_wrap {
     display: flex;
     justify-content: space-between;
-    width: 60%;
+    max-width: 1000px;
+    padding-left: 20%;
+    padding-right: 20%;
     margin: 0 auto;
 }
 .work_pc_only {
@@ -166,7 +246,6 @@ h3 {
 .work_desc_point {
     width: 65%;
     padding-right: 4%;
-    border-right: 3px dotted #a2d7dd;
 }
 .work_desc_point p {
     text-align: justify;
@@ -179,6 +258,7 @@ h3 {
 }
 .work_desc_category {
     padding-left: 4%;
+    border-left: 2px dotted #a2d7dd;
 }
 dt {
     font-size: 14px;

@@ -1,1 +1,66 @@
 @charset "UTF-8";
+/* .back_design {
+    max-width: 1600px;
+    background-image: url(../images/about_back@2x.png);
+} */
+.adjust_height {
+    max-width: 1600px;
+}
+/* .back_design {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+} */
+h2 {
+    font-size: 30px;
+    letter-spacing: 0.1em;
+    z-index: -1;
+}
+.heading {
+    position: absolute;
+    top: 180px;
+    left: 6%;
+    z-index: -1;
+}
+.about_wrap {
+    /* max-width: 980px; */
+    width: 60%;
+    margin: 300px auto;
+}
+.name {
+    font-size: 25px;
+    font-feature-settings: "palt";
+    letter-spacing: 0.1em;
+    margin-bottom: 25px;
+}
+.name_en::before {
+    content: "Yori";
+    padding-left: 20px;
+    font-size: 15px;
+    color: #969696;
+}
+.about_desc_wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 72px;
+}
+.abuot_desc {
+    font-size: 16px;
+    font-feature-settings: "palt";
+    letter-spacing: 0.1em;
+    line-height: 2;
+    margin-bottom: 25px;
+}
+.about_achieve {
+    font-size: 14px;
+    font-feature-settings: "palt";
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+    color: #969696;
+    margin-bottom: 25px;
+}
+.about_skill_icon {
+    width: 50%;
+}

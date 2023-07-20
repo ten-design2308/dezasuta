@@ -7,15 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>私について｜ten.</title>
     <meta name="description" content="私のできることや好きなものなどをご紹介します。">
-    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 </head>
 
 <body>
+
     <!-- ヘッダー -->
     <header>
         <h1 class="header_logo">
-            <a href="./index.html">
+            <a href="../index.html">
                 <img src="images/ten_logo_black@2x.png" alt="ten.">
             </a>
         </h1>
@@ -27,10 +30,10 @@
             <div class="nav_wrap_center">
                 <nav class="nav_wrap_list">
                     <ul>
-                        <li><a href="./thought/index.html">想い</a></li>
-                        <li><a href="./works/index.html">制作と活動</a></li>
-                        <li><a href="./about/index.html">私について</a></li>
-                        <li><a href="./contact/index.html">お問い合わせ</a></li>
+                        <li><a href="../thought/index.html">想い</a></li>
+                        <li><a href="../works/index.html">制作と活動</a></li>
+                        <li><a href="../about/index.html">私について</a></li>
+                        <li><a href="../contact/index.html">お問い合わせ</a></li>
                     </ul>
                 </nav>
                 <div class="nav_wrap_sns">
@@ -40,15 +43,45 @@
         </div>
     </header>
 
-    <script>
-        $(function () {
-            $('.nav_btn, .nav_wrap_list li').on('click', function () {
-                $('.nav_wrap').fadeToggle();
-                $('.nav_btn_line, .nav_btn').toggleClass('open');
+    <div class="back_design">
+        <h2 class="vertical heading">私について</h2>
+        <div class="about_wrap">
 
-            });
-        });
-    </script>
+            <p class="name">より<span class="name_en"></span></p>
+            <div class="about_desc_wrap">
+                <p class="abuot_desc">東京家政大学
+                    造形表現学科卒業<br>日本画、陶芸、金工、グラッフィックなど他にも幅広く学びました。<br>卒業後は印刷会社に勤め、編集、デザイン、校正などを行っています。<br>書道と合気道を習っています。
+                </p>
+                <p class="about_achieve">森のサロン「学生がつくるサロンプロジェクト」参加<br>第62回太玄会書展 特選<br>第64回太玄会書展 準特選</p>
+            </div>
+            <div class="about_skill_icon">
+                <img src="images/about_skill_icon@2x.png" alt="スキルアイコン">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- フッター -->
+    <div class="footer_img">
+        <img src="images/footer_pc@2x.png" alt="波">
+    </div>
+    <footer>
+        <div class="footer_wrap">
+            <nav class="footer_nav">
+                <ul class="footer_list">
+                    <li><a href="../thought/index.html">想い</a></li>
+                    <li><a href="../works/index.html">制作と活動</a></li>
+                    <li><a href="../about/index.html">私について</a></li>
+                    <li><a href="../contact/index.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <a href="./index.html" class="footer_logo">
+                <img src="images/ten_logo_white@2x.png" alt="ten.">
+            </a>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
 </body>
 
 </html>

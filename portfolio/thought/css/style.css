@@ -1,19 +1,32 @@
 @charset "UTF-8";
 
+.section {
+    position: relative;
+}
 h2 {
     font-size: 30px;
     letter-spacing: 0.1em;
     z-index: -1;
 }
-.heading_01 {
-    position: fixed;
-    top: 180px;
-    left: 6%;
+.adjust_height {
+    height: 80px;
+    margin-top: 180px;
+}
+.heading {
+    position: absolute;
+    top: 0;
+    left: 70px;
+    height: 100%;
     z-index: -1;
 }
+.sticky {
+    position: sticky;
+    top: 140px;
+}
+
 .top {
     height: 450px;
-    margin: 250px auto 0;
+    margin: 0 auto;
     font-size: 24px;
     line-height: 2;
     letter-spacing: 0.1em;
@@ -21,39 +34,41 @@ h2 {
 
 .thought_wrap {
     text-align: justify;
-    width: 60%;
+    max-width: 1000px;
+    padding: 0 10%;
     margin: 200px auto 160px;
 }
 .thought_right {
     text-align: justify;
-    width: 60%;
-    margin-left: 40%;
+    width: 55%;
+    margin-left: 45%;
 }
 .thought_left {
-    width: 60%;
+    width: 55%;
 }
 .thought_right + .thought_left,
 .thought_left + .thought_right {
     margin-top: 150px;
 }
 
-.heading_02 {
+/* .heading_02 {
     position: absolute;
-    /* width: 120px; */
     height: 170px;
     left: 6%;
     z-index: -1;
-}
+} */
 .logo_wrap {
-    width: 60%;
-    margin: 160px auto 160px;
+    max-width: 780px;
+    padding-left: 20%;
+    padding-right: 20%;
+    margin: 300px auto 160px;
 }
 .logo_img {
     width: 35%;
-    margin: 300px auto 160px;
+    margin: 0 auto 160px;
 }
-.logo_desc + .logo_desc {
-    margin-top: 160px;
+.logo_desc_mean {
+    margin-bottom: 160px;
 }
 
 h3 {
@@ -71,10 +86,21 @@ h3 {
     line-height: 2;
     margin-bottom: 40px;
 }
+
+.logo_desc_symbol {
+    display: flex;
+    justify-content: space-between;
+}
+.logo_desc_symbol_desc {
+    padding-right: 20px;
+}
+.logo_desc_symbol_img {
+    width: 75px;
+}
 .thought_logo {
     font-size: 16px;
     font-feature-settings: "palt";
     letter-spacing: 0.05em;
     line-height: 2;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }

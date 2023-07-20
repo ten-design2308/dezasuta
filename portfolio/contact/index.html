@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>お問い合わせ｜ten.</title>
     <meta name="description" content="ten.のお問い合わせフォームです。">
-    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
@@ -29,10 +29,10 @@
             <div class="nav_wrap_center">
                 <nav class="nav_wrap_list">
                     <ul>
-                        <li><a href="./thought/index.html">想い</a></li>
-                        <li><a href="./works/index.html">制作と活動</a></li>
-                        <li><a href="./about/index.html">私について</a></li>
-                        <li><a href="./contact/index.html">お問い合わせ</a></li>
+                        <li><a href="../thought/index.html">想い</a></li>
+                        <li><a href="../works/index.html">制作と活動</a></li>
+                        <li><a href="../about/index.html">私について</a></li>
+                        <li><a href="../contact/index.html">お問い合わせ</a></li>
                     </ul>
                 </nav>
                 <div class="nav_wrap_sns">
@@ -54,53 +54,31 @@
 
         <div class="contact_wrap">
             <label for="name_01" class="contact_item">お名前</label>
-            <input id="name_01" class="contact_box_s" type="text" name="entry.1274131809" placeholder="山田 太郎">
+            <input id="name_01" class="contact_box_s" type="text" name="entry.1274131809" placeholder="山田 太郎" required>
 
             <label for="name_02" class="contact_item">フリガナ</label>
-            <input id="name_02" class="contact_box_s" type="text" name="entry.1427460467" placeholder="ヤマダ タロウ">
+            <input id="name_02" class="contact_box_s" type="text" name="entry.1427460467" placeholder="ヤマダ タロウ"
+                required>
 
             <label for="email" class="contact_item">メールアドレス</label>
-            <input id="email" class="contact_box_s" type="text" name="entry.1995535631"
-                placeholder="example@mail.co.jp">
+            <input id="email" class="contact_box_s" type="text" name="entry.1995535631" placeholder="example@mail.co.jp"
+                required>
 
             <label for="tel" class="contact_item">お電話番号</label>
             <input id="tel" class="contact_box_s" type="text" name="entry.506367846" placeholder="123-4567-8901">
 
             <label for="msg" class="contact_item">お問い合わせ内容</label>
-            <textarea id="msg" class="contact_box_l" name="entry.1580849601" placeholder="お気軽にお問い合わせください。"></textarea>
+            <textarea id="msg" class="contact_box_l" name="entry.1580849601" placeholder="お気軽にお問い合わせください。"
+                required></textarea>
 
-            <button type="button" onclick="submit();" name="button" value="送信"
-                class="contact_item btn_next">送信する</button>
+            <button type="submit" name="button" value="送信" class="contact_item btn_next">送信する</button>
         </div>
     </form>
     <script type="text/javascript">
         var submitted = false;
     </script>
     <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
-        onload="if(submitted)  {window.location='/Users/shiori/Desktop/dezasuta/portfolio/thanks.html';}"></iframe>
-
-
-    <!-- <div class="contact_wrap">
-        <span class="contact_item">お名前</span>
-        <div class="contact_box_s"></div>
-
-        <span class="contact_item">フリガナ</span>
-        <div class="contact_box_s"></div>
-
-        <span class="contact_item">メールアドレス</span>
-        <div class="contact_box_s"> </div>
-
-        <span class="contact_item">お電話番号</span>
-        <div class="contact_box_s"></div>
-
-        <span class="contact_item">お問い合わせ内容</span>
-        <div class="contact_box_l"></div>
-    </div>
-
-    <a href="./thanks/index.html">
-        <span class="btn_next">送信する</span>
-    </a> -->
-
+        onload="if(submitted)  {window.location='thanks.html';}"></iframe>
 
     <!-- フッターhomeから移植 -->
     <!-- フッター -->
@@ -111,10 +89,10 @@
         <div class="footer_wrap">
             <nav class="footer_nav">
                 <ul class="footer_list">
-                    <li><a href="./thought/index.html">想い</a></li>
-                    <li><a href="./works/index.html">制作と活動</a></li>
-                    <li><a href="./about/index.html">私について</a></li>
-                    <li><a href="./contact/index.html">お問い合わせ</a></li>
+                    <li><a href="../thought/index.html">想い</a></li>
+                    <li><a href="../works/index.html">制作と活動</a></li>
+                    <li><a href="../about/index.html">私について</a></li>
+                    <li><a href="../contact/index.html">お問い合わせ</a></li>
                 </ul>
             </nav>
             <a href="./index.html" class="footer_logo">
@@ -123,15 +101,8 @@
         </div>
     </footer>
 
-    <script>
-        $(function () {
-            $('.nav_btn, .nav_wrap_list li').on('click', function () {
-                $('.nav_wrap').fadeToggle();
-                $('.nav_btn_line, .nav_btn').toggleClass('open');
+    <script src="../js/script.js"></script>
 
-            });
-        });
-    </script>
 </body>
 
 

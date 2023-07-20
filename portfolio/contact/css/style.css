@@ -91,3 +91,12 @@ textarea:focus {
     border: solid 1px #d0ebee;
     margin: 0 auto 100px;
 }
+
+/* サンクスページ */
+.thanks_p {
+    font-size: 16px;
+    font-feature-settings: "palt";
+    letter-spacing: 0.1em;
+    line-height: 2;
+    margin-bottom: 200px;
+}
