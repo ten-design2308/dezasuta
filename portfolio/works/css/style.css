@@ -21,12 +21,16 @@
     height: 100%;
     z-index: -1;
 }
+.pc_vertical {
+    writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: vertical-rl;
+}
 .sticky {
     position: sticky;
     top: 140px;
-    font-size: 25px;
+    font-size: 30px;
     /* height: 200px; */
-    z-index: -1;
 }
 
 .works_list_top {
@@ -58,7 +62,9 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 60%;
+    max-width: 1100px;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 .works_design_wrap {
     margin: 200px auto 0;
@@ -67,7 +73,7 @@
     margin: 200px auto 0;
 }
 .works_workshop_wrap {
-    margin: 100px auto 200px;
+    margin: 200px auto 200px;
 }
 .works_list_img {
     max-width: 1200px;
@@ -109,7 +115,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /*テキストの位置中央指定*/
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
     color: #165e83; /*テキストの色を変えたい場合はここを修正*/
     line-height: 1.5; /*行の高さを1.5にする*/
@@ -160,10 +166,8 @@
 }
 .next {
     text-align: center;
-    display: block;
-    font-size: 16px;
+    font-size: 15px;
     font-feature-settings: "palt";
-    margin-bottom: 150px;
 }
 
 /*== 波紋がふわっと広がる */
@@ -173,10 +177,13 @@
     position: relative;
     /*リンクの形状*/
     display: block;
+    width: fit-content;
+    margin: 0 auto 150px;
     text-decoration: none;
     color: #165e83;
     outline: none;
 }
+
 /*波形の設定*/
 .btn_hover:hover::before {
     content: "";
@@ -194,6 +201,7 @@
     /*アニメーションの設定*/
     animation: 1s circleanime2 forwards;
 }
+
 /*波形が広がるアニメーション*/
 @keyframes circleanime2 {
     0% {
@@ -210,8 +218,8 @@
     content: "";
     /*絶対配置で矢印の位置を決める*/
     position: absolute;
-    top: 17%;
-    right: 45%;
+    top: 4px;
+    right: -20px;
     /*矢印の形状*/
     width: 8px;
     height: 8px;
@@ -221,7 +229,7 @@
 }
 
 .work_top_img {
-    max-width: 70%;
+    max-width: 80%;
     margin: 150px auto 72px;
 }
 h3 {
@@ -231,12 +239,16 @@ h3 {
     letter-spacing: 0.05em;
     margin-bottom: 90px;
 }
+.br_pc_none {
+    display: none;
+}
 .work_desc_wrap {
     display: flex;
     justify-content: space-between;
+    flex-direction: row-reverse;
     max-width: 1000px;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 15%;
+    padding-right: 15%;
     margin: 0 auto;
 }
 .work_pc_only {
@@ -249,7 +261,7 @@ h3 {
 }
 .work_desc_point p {
     text-align: justify;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.5;
     letter-spacing: 0.05em;
 }
@@ -259,6 +271,9 @@ h3 {
 .work_desc_category {
     padding-left: 4%;
     border-left: 2px dotted #a2d7dd;
+}
+dl {
+    display: block;
 }
 dt {
     font-size: 14px;
@@ -280,4 +295,159 @@ dd {
 }
 dd + dd {
     margin-bottom: 24px;
+}
+
+/* レスポンシブ */
+@media screen and (max-width: 1024px) {
+    /* それぞれのページ */
+    dl + dl {
+        margin-top: 32px;
+    }
+    dt {
+        /* 要素を縦に並べる */
+        float: none;
+        margin-bottom: 15px;
+        width: 80px;
+    }
+    dd {
+        /* 要素を縦に並べる */
+        float: none;
+        margin-left: 0;
+    }
+    dd + dd {
+        margin-bottom: 0;
+    }
+    .work_desc_point {
+        width: 100%;
+    }
+    .work_desc_wrap {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+}
+@media screen and (max-width: 767px) {
+    /* 一覧 */
+    .works_list_top {
+        margin-top: 220px;
+        margin-left: 15%;
+    }
+    .heading_list {
+        top: 130px;
+        left: 6%;
+        font-size: 25px;
+    }
+    .works_list_top li {
+        font-size: 17px;
+        margin-top: 30px;
+    }
+    .sticky {
+        font-size: 25px;
+    }
+    .works_design_wrap,
+    .works_art_wrap,
+    .works_workshop_wrap {
+        display: block;
+        padding-top: 50px;
+    }
+    .works_list_img {
+        margin-top: 0;
+    }
+    .works_list_img + .works_list_img {
+        margin-top: 50px;
+    }
+    .works_list_img {
+        width: 100%;
+    }
+
+    /* それぞれのページ */
+    .work_desc_wrap {
+        display: block;
+    }
+    .work_desc_category {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto;
+        gap: 50px 10px;
+        margin-bottom: 120px;
+    }
+    dl + dl {
+        margin-top: 0;
+    }
+    dt {
+        font-size: 13px;
+        padding-left: 10px;
+    }
+    dd {
+        float: left;
+        padding-left: 10px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    .work_pc_only {
+        width: 70%;
+    }
+    .br_pc_none {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 452px) {
+    /* 一覧 */
+    .heading_list {
+        position: static;
+        font-size: 25px;
+        margin: 130px auto 80px;
+    }
+    .works_list_top {
+        margin-top: 0;
+        margin-left: 10%;
+    }
+    .head_sticky {
+        z-index: 10;
+    }
+    .pc_vertical {
+        writing-mode: horizontal-tb;
+    }
+    .works_design_wrap,
+    .works_art_wrap,
+    .works_workshop_wrap {
+        margin-top: 150px;
+        padding-top: 30px;
+    }
+    .works_list_img {
+        margin-top: -15px;
+    }
+    .works_list_img + .works_list_img {
+        margin-top: 50px;
+    }
+
+    /* それぞれのページ */
+    .pc_vertical {
+        writing-mode: horizontal-tb;
+    }
+    .heading_each {
+        position: relative;
+        top: 165px;
+        width: fit-content;
+        z-index: 50;
+    }
+    .work_top_img {
+        max-width: 100%;
+        margin: 150px auto 50px;
+    }
+    .work_desc_wrap {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .work_desc_category {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+        row-gap: 30px;
+        margin-bottom: 80px;
+    }
+    dt {
+        margin-bottom: 8px;
+    }
 }

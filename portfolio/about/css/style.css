@@ -1,18 +1,4 @@
 @charset "UTF-8";
-/* .back_design {
-    max-width: 1600px;
-    background-image: url(../images/about_back@2x.png);
-} */
-.adjust_height {
-    max-width: 1600px;
-}
-/* .back_design {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-} */
 h2 {
     font-size: 30px;
     letter-spacing: 0.1em;
@@ -25,8 +11,9 @@ h2 {
     z-index: -1;
 }
 .about_wrap {
-    /* max-width: 980px; */
-    width: 60%;
+    max-width: 1000px;
+    padding-left: 15%;
+    padding-right: 15%;
     margin: 300px auto;
 }
 .name {
@@ -47,10 +34,11 @@ h2 {
     margin-bottom: 72px;
 }
 .abuot_desc {
-    font-size: 16px;
+    font-size: 15px;
     font-feature-settings: "palt";
     letter-spacing: 0.1em;
     line-height: 2;
+    padding-right: 10px;
     margin-bottom: 25px;
 }
 .about_achieve {
@@ -63,4 +51,38 @@ h2 {
 }
 .about_skill_icon {
     width: 50%;
+}
+
+/* レスポンシブ */
+@media screen and (max-width: 767px) {
+    h2 {
+        font-size: 25px;
+    }
+    .about_desc_wrap {
+        display: block;
+    }
+    .about_achieve {
+        font-size: 13px;
+    }
+    .about_skill_icon {
+        width: 50%;
+    }
+    .about_skill_icon {
+        width: 300px;
+    }
+}
+@media screen and (max-width: 452px) {
+    .heading {
+        position: static;
+        margin: 130px auto 80px;
+    }
+    .about_wrap {
+        padding-left: 10%;
+        padding-right: 10%;
+        margin-top: 0;
+        margin-bottom: 150px;
+    }
+    .about_skill_icon {
+        width: 100%;
+    }
 }

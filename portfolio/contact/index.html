@@ -36,49 +36,56 @@
                     </ul>
                 </nav>
                 <div class="nav_wrap_sns">
-                    <img src="images/instagarm_logo@2x.png" alt="インスタグラムアカウント">
+                    <a href="https://www.instagram.com/ten._design_2308/?igshid=OGQ5ZDc2ODk2ZA%3D%3D">
+                        <img src="images/instagarm_logo@2x.png" alt="インスタグラムアカウント">
+                    </a>
                 </div>
             </div>
         </div>
     </header>
     <!-- ヘッダーできたらhomeから移植 -->
 
-    <h2 class="vertical heading">お問い合わせ</h2>
-    <p>興味を持ってくださった方、お気軽にご連絡ください。</p>
-
-
     <!-- フォーム -->
-    <form onsubmit="submitted=true;"
-        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc1GYPvpZNJT7h7OVgWDoY82uv7OdNBUzcpmCGkV8Gj81a_2Q/formResponse"
-        method="post" target="hidden_iframe">
-
-        <div class="contact_wrap">
-            <label for="name_01" class="contact_item">お名前</label>
-            <input id="name_01" class="contact_box_s" type="text" name="entry.1274131809" placeholder="山田 太郎" required>
-
-            <label for="name_02" class="contact_item">フリガナ</label>
-            <input id="name_02" class="contact_box_s" type="text" name="entry.1427460467" placeholder="ヤマダ タロウ"
-                required>
-
-            <label for="email" class="contact_item">メールアドレス</label>
-            <input id="email" class="contact_box_s" type="text" name="entry.1995535631" placeholder="example@mail.co.jp"
-                required>
-
-            <label for="tel" class="contact_item">お電話番号</label>
-            <input id="tel" class="contact_box_s" type="text" name="entry.506367846" placeholder="123-4567-8901">
-
-            <label for="msg" class="contact_item">お問い合わせ内容</label>
-            <textarea id="msg" class="contact_box_l" name="entry.1580849601" placeholder="お気軽にお問い合わせください。"
-                required></textarea>
-
-            <button type="submit" name="button" value="送信" class="contact_item btn_next">送信する</button>
+    <section class="section">
+        <div class="heading">
+            <h2 class="vertical pc_sticky">お問い合わせ</h2>
         </div>
-    </form>
+        <h2 class="vertical sp_un_sticky">お問い合わせ</h2>
+        <p>興味を持ってくださった方、<br class="br_pc_none">お気軽にご連絡ください。</p>
+        <form onsubmit="submitted=true;"
+            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc1GYPvpZNJT7h7OVgWDoY82uv7OdNBUzcpmCGkV8Gj81a_2Q/formResponse"
+            method="post" target="hidden_iframe">
+
+            <div class="contact_wrap">
+                <label for="name_01" class="contact_item">お名前</label>
+                <input id="name_01" class="contact_box_s" type="text" name="entry.1274131809" placeholder="山田 太郎"
+                    required>
+
+                <label for="name_02" class="contact_item">フリガナ</label>
+                <input id="name_02" class="contact_box_s" type="text" name="entry.1427460467" placeholder="ヤマダ タロウ"
+                    required>
+
+                <label for="email" class="contact_item">メールアドレス</label>
+                <input id="email" class="contact_box_s" type="text" name="entry.1995535631"
+                    placeholder="example@mail.co.jp" required>
+
+                <label for="tel" class="contact_item">お電話番号</label>
+                <input id="tel" class="contact_box_s" type="text" name="entry.506367846" placeholder="123-4567-8901">
+
+                <label for="msg" class="contact_item">お問い合わせ内容</label>
+                <textarea id="msg" class="contact_box_l" name="entry.1580849601" placeholder="お気軽にお問い合わせください。"
+                    required></textarea>
+
+                <button type="submit" name="button" value="送信" class="contact_item btn_next">送信する</button>
+            </div>
+        </form>
+    </section>
     <script type="text/javascript">
         var submitted = false;
     </script>
     <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
         onload="if(submitted)  {window.location='thanks.html';}"></iframe>
+
 
     <!-- フッターhomeから移植 -->
     <!-- フッター -->
@@ -89,22 +96,28 @@
         <div class="footer_wrap">
             <nav class="footer_nav">
                 <ul class="footer_list">
-                    <li><a href="../thought/index.html">想い</a></li>
-                    <li><a href="../works/index.html">制作と活動</a></li>
-                    <li><a href="../about/index.html">私について</a></li>
-                    <li><a href="../contact/index.html">お問い合わせ</a></li>
+                    <li><a href="./thought/index.html">想い</a></li>
+                    <li><a href="./works/index.html">制作と活動</a></li>
+                    <li><a href="./about/index.html">私について</a></li>
+                    <li><a href="./contact/index.html">お問い合わせ</a></li>
                 </ul>
+                <div class="footer_insta_img">
+                    <a href="https://www.instagram.com/ten._design_2308/?igshid=OGQ5ZDc2ODk2ZA%3D%3D"
+                        class="footer_insta">
+                        <img src="images/instagarm_logo@2x.png" alt="インスタグラムアカウント">
+                    </a>
+                </div>
             </nav>
             <a href="./index.html" class="footer_logo">
                 <img src="images/ten_logo_white@2x.png" alt="ten.">
             </a>
         </div>
+        <span class="copyright">© 2023 ten.</span>
     </footer>
 
     <script src="../js/script.js"></script>
 
 </body>
-
 
 
 </html>
