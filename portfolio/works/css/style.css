@@ -232,7 +232,7 @@
     max-width: 80%;
     margin: 150px auto 72px;
 }
-h3 {
+.work_lead {
     text-align: center;
     font-size: 25px;
     font-feature-settings: "palt";
@@ -381,7 +381,7 @@ dd + dd {
         float: left;
         padding-left: 10px;
     }
-    h3 {
+    .work_lead {
         font-size: 20px;
     }
     .work_pc_only {
